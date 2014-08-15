@@ -18,7 +18,7 @@ gem 'haml'
 
 gem 'bcrypt'
 
-gem 'pry' group: :development
+gem 'pry', group: :development
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
