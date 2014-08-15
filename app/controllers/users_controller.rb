@@ -10,29 +10,20 @@ class UsersController < ActionController::Base
   end
 
   def create
-      User.create(name: params[:user][:name], email: params[:user][:email], password: params[:user][:password])
-      redirect_to :show
+    @user = User.create(params[:user])
   end
 
   def verify
-    p 'hit verify'
-    if user = User.where('email = ?', params[:user][:email])
-      if user && user.match_password(params[:user][:password])
-        p 'we found youuuuuuuu'
-      else
-        p 'wrong passworddddd'
-      end
+    @user = User.where('email = ? AND password = ?', params[:user][:email], params[:user][:password])
+    if @user != []
+      redirect_to user_path(id: @user.first.id)
     else
-      p 'you are an imposter!!!!!!!!!!!!'
-    end
-
+      flash[:notice] = "Login Fail"
+      redirect_to root_path, flash: { notice: "Login Fail"}
+    end      
   end
 
   def show
-  end
-
-  def match_password(login_password="")
-    encrypted_password == BCrypt::Engine.hash_secret(login_password, salt)
   end
 
 
