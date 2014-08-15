@@ -28,6 +28,7 @@ class UsersController < ActionController::Base
   end
 
   def show
+    redirect_to user_workouts_path(params[:id])
   end
 
 
