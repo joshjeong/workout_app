@@ -10,7 +10,11 @@ class UsersController < ActionController::Base
   end
 
   def create
-    @user = User.create(params[:user])
+    name = params[:user][:name]
+    email = params[:user][:email]
+    password = params[:user][:password]
+    @user = User.create(name: name, email: email, password: password)
+    redirect_to user_path(id: @user.id)
   end
 
   def verify
