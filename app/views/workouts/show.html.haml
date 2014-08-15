@@ -1,0 +1,25 @@
+%h1
+  = @workouts.first.name
+%br
+
+%table
+  %tr
+    %td
+      Date
+    %td
+      - @workouts.first.attributes.each do |attribute_name, value|
+        - if value != nil
+          - if filter_result(attribute_name)
+            = attribute_name.capitalize
+  - @workouts.each do |workout|
+    %tr
+      %td
+        - day = workout.created_at.day
+        - month = workout.created_at.month
+        - year = workout.created_at.year
+        = "#{month}/#{day}/#{year}"
+      %td
+        - @workouts.first.attributes.each do |attribute_name, value|
+          - if value != nil
+            - if filter_result(attribute_name)
+              = value 
