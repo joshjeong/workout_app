@@ -7,3 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 josh = User.create(name: 'josh', email: 'j', password: 'asdf')
+w1 = josh.workouts.create(name: 'push up', reps: 15)
+w11 = josh.workouts.create(name: 'push up', reps: 16)
+w12 = josh.workouts.create(name: 'push up', reps: 19)
+w2 = josh.workouts.create(name: 'run')
+w3 = josh.workouts.create(name: 'bench')
+w4 = Workout.create(name: 'yooooooo')
+

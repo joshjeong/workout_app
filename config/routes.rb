@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'users#index'
 
-  resources :users
+  resources :users do
+    resources :workouts
+  end
   post '/verify', to: 'users#verify'
 
   # The priority is based upon order of creation: first created -> highest priority.

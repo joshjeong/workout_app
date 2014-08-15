@@ -1,0 +1,10 @@
+- @unique_workouts = []
+- @user.first.workouts.each do |workout|
+  - @unique_workouts << workout.name
+- @unique_workouts.uniq!
+
+%ul
+  - @unique_workouts.each do |workout|
+    - @workout = Workout.where('name = ?', workout).first
+    %li
+      = link_to workout, user_workout_path(id: @workout.id)
