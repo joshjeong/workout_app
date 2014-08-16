@@ -1,3 +1,5 @@
+= link_to "Add Workout", new_user_workout_path
+
 - @unique_workouts = []
 - @user.first.workouts.each do |workout|
   - @unique_workouts << workout.name

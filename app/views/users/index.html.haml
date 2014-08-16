@@ -1,17 +1,16 @@
+/ %div{:id => mobile_page_id, :data => {:role => 'page', :title => title}}
+
 = form_for @user, url: {action: "verify"} do |f| 
+  .login_form{'data-role' => "fieldcontain"}
+    = f.text_field :email, placeholder: 'Email'
+    = f.text_field :password, placeholder: 'Password'
+    = f.submit "Login"
 
-  = f.label :email
-  = f.text_field :email 
-
-  = f.label :password
-  = f.text_field :password
-
-  = f.submit "Login"
-  
-= link_to "Sign Up", new_user_path
+= link_to "Sign Up", new_user_path, "data-role" => "button"
 
 %br
 %br
 
-- flash.each do |name, msg|
-  = msg
+.flash_msg
+  - flash.each do |name, msg|
+    = msg
