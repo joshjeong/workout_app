@@ -1,7 +1,6 @@
 class UsersController < ActionController::Base
 
   def index
-    p 'indexxxxx'
     @user = User.new
   end
 

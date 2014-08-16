@@ -1,4 +1,3 @@
-require 'pry'
 class WorkoutsController < ActionController::Base
   def index
     @user = User.where('id = ?', params[:user_id])
@@ -11,11 +10,8 @@ class WorkoutsController < ActionController::Base
   def create
     params.permit!
     @user = User.where('id = ?', params[:user_id])
-    p '--------'
-    p @user
-    binding.pry
     @user.first.workouts.create(params[:workout])
-    redirect_to :index
+    redirect_to user_workouts_path
   end
 
   def show
