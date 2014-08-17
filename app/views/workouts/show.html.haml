@@ -10,7 +10,7 @@
     %td{class: "top_row"}
       Date
     - @workouts.first.attributes.each do |attr_name, value|
-      %td
+      %td{class: "top_row"}
         - if value != nil
           - if filter_result(attr_name)
             = attr_name.capitalize
