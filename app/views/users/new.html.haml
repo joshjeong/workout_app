@@ -1,13 +1,10 @@
 = form_for @user do |f| 
 
-  = f.label :name
-  = f.text_field :name 
+  = f.text_field :name, placeholder: 'Name' 
 
-  = f.label :email
-  = f.text_field :email 
+  = f.text_field :email, placeholder: 'Email'  
 
-  = f.label :password
-  = f.text_field :password
+  = f.text_field :password, placeholder: 'Password' 
 
   = f.submit "Signup"
 
