@@ -1,4 +1,4 @@
-class WorkoutsController < ActionController::Base
+class WorkoutsController < ApplicationController
   def index
     @user = User.where('id = ?', params[:user_id])
   end
