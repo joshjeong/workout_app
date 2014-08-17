@@ -1,11 +1,13 @@
-= link_to "Back", user_workouts_path
-%h1
-  = @workouts.first.name
-%br
+
+%div{"data-role" => "header"}
+  %h1
+    #{@workouts.first.name.capitalize}
+
+%a.ui-btn.ui-btn-inline.ui-shadow.ui-corner-all.ui-btn-a.ui-icon-carat-l.ui-btn-icon-notext{"data-rel" => "close", :href => user_workouts_path}d
 
 %table
   %tr
-    %td
+    %td{class: "top_row"}
       Date
     - @workouts.first.attributes.each do |attr_name, value|
       %td
@@ -24,3 +26,5 @@
             - if value != nil
               - if filter_result(attr_name)
                 = value 
+
+    
