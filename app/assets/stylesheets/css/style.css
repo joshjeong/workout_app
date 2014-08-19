@@ -11,3 +11,8 @@ table {
   text-align: center;
   border: 1px solid black;
   border-radius: 50px; }
+
+.ui-content {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  display: -webkit-box; }
