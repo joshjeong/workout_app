@@ -1,9 +1,11 @@
-= form_for @user, url: {action: "verify"} do |f| 
-  = f.text_field :email, placeholder: 'Email'
-  = f.text_field :password, placeholder: 'Password'
-  = f.submit "Login", class: 'ui-btn-b'
+%div{"data-role" => "page"}
+  .ui-content{"data-role" => "main"}
+    = form_for @user, url: {action: "verify"} do |f| 
+      = f.text_field :email, placeholder: 'Email'
+      = f.text_field :password, placeholder: 'Password'
+      = f.submit "Login", class: 'ui-btn-b'
 
-= link_to "Sign Up", new_user_path, "data-role" => "button"
+      = link_to "Sign Up", new_user_path, "data-role" => "button"
 
 %br
 %br

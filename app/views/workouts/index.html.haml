@@ -1,4 +1,4 @@
-#workout_index{"data-role" => "page"}
+#workout_index{"data-role" => "main"}
   #menu{"data-role" => "panel"}
     %a.ui-btn.ui-btn-inline.ui-shadow.ui-corner-all.ui-btn-a.ui-icon-plus.ui-btn-icon-notext{"data-rel" => "close", :href => new_user_workout_path}
     - @unique_workouts = []
@@ -13,5 +13,4 @@
   %div{"data-role" => "header"}
     %h1 
       Welcome, #{@user.first.name.capitalize}!
-  .ui-content{"data-role" => "main"}
     %a.ui-btn.ui-btn-inline.ui-corner-all.ui-shadow.ui-icon-bullets.ui-btn-icon-notext{:href => "#menu"}
