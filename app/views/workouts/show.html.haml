@@ -1,10 +1,9 @@
 
-%div{"data-role" => "header"}
-  %h1
-    #{@workouts.first.name.capitalize}
+%h1
+  #{@workouts.first.name.capitalize}
 
-  %a.ui-btn.ui-btn-inline.ui-shadow.ui-corner-all.ui-btn-a.ui-icon-carat-l.ui-btn-icon-notext{"data-rel" => "close", :href => user_workouts_path}d
-%br
+= link_to "Back", user_workouts_path
+
 
 
 %table
