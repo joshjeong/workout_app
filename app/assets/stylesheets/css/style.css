@@ -50,10 +50,11 @@ input {
 
 .top_row {
   text-shadow: none;
-  background-color: lightgrey;
+  background-color: #165F80;
+  color: white;
   text-align: center; }
 
-table {
+.table_format {
   margin: auto;
   text-align: center;
   border: 1px solid black;
@@ -61,6 +62,12 @@ table {
 
 * {
   box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: white; }
+  a:visited {
+    color: white; }
 
 .container {
   border-collapse: collapse;
@@ -73,7 +80,9 @@ table {
     .container .new_user input {
       width: 100%;
       height: 2rem; }
-    .container .new_user .login-input {
+      .container .new_user input:focus {
+        outline: 0; }
+    .container .new_user .input-field {
       border: 1px solid lightgray;
       padding-left: 0.5rem; }
     .container .new_user #signup {
@@ -83,3 +92,33 @@ table {
 .btn {
   background-color: #587e8c;
   color: white; }
+
+.workout-container {
+  margin: auto;
+  border-collapse: collapse;
+  width: 17rem;
+  height: 20rem;
+  overflow: scroll; }
+  .workout-container #welcome-header {
+    text-align: center;
+    background-color: #0b3040;
+    color: #FFFFFF;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .workout-container #welcome-header .menu-button {
+      position: absolute;
+      text-align: left; }
+  .workout-container .workout-list {
+    width: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    background-color: lightgray; }
+    .workout-container .workout-list ul {
+      border-collapse: collapse; }
+      .workout-container .workout-list ul li {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid white; }
+        .workout-container .workout-list ul li a {
+          color: #165F80; }

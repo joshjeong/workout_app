@@ -1,10 +1,10 @@
-= form_for @user do |f| 
+.container
+  = form_for @user do |f| 
 
-  = f.text_field :name, placeholder: 'Name' 
+    = f.text_field :name, placeholder: 'Name', class: "input-field"
 
-  = f.text_field :email, placeholder: 'Email'  
+    = f.text_field :email, placeholder: 'Email', class: "input-field"  
 
-  = f.text_field :password, placeholder: 'Password' 
+    = f.text_field :password, placeholder: 'Password', class: "input-field" 
 
-  = f.submit "Signup"
-
+    = f.submit "Signup", class: "btn"
