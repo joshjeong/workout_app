@@ -1,0 +1,30 @@
+.container {
+  border-collapse: collapse;
+  margin-top: 4rem;
+  width: 100%;
+  text-align: center;
+  .new_user {
+    margin: auto;
+    width: 15rem;
+    input {
+      width: 100%;
+      height: 2rem;
+      &:focus{
+        outline:0;
+      }
+    }
+    .input-field {
+      border: 1px solid lightgray;
+      padding-left: 0.5rem;
+    }
+    #signup {
+      position: relative;
+      top: 1rem;
+    }
+  }
+}
+
+.btn {
+  background-color: #587e8c;
+  color: white;
+}

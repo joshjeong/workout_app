@@ -1,32 +1,32 @@
-
-%div{"data-role" => "header"}
-  %h1
+.workout-container
+  #welcome-header
     #{@workouts.first.name.capitalize}
+    .menu-button
+      = link_to "Back", user_workouts_path
 
-  %a.ui-btn.ui-btn-inline.ui-shadow.ui-corner-all.ui-btn-a.ui-icon-carat-l.ui-btn-icon-notext{"data-rel" => "close", :href => user_workouts_path}d
-%br
 
+  %br
 
-%table
-  %tr
-    %td{class: "top_row"}
-      Date
-    - @workouts.first.attributes.each do |attr_name, value|
+  %table{class: "table_format"}
+    %tr
       %td{class: "top_row"}
-        - if value != nil
-          - if filter_result(attr_name)
-            = attr_name.capitalize
-    - @workouts.each do |workout|
-      %tr
-        %td
-          - day = workout.created_at.day
-          - month = workout.created_at.month
-          - year = workout.created_at.year
-          = "#{month}/#{day}/#{year}"
-        - @workouts.first.attributes.each do |attr_name, value|
+        Date
+      - @workouts.first.attributes.each do |attr_name, value|
+        %td{class: "top_row"}
+          - if value != nil
+            - if filter_result(attr_name)
+              = attr_name.capitalize
+      - @workouts.each do |workout|
+        %tr
           %td
-            - if value != nil
-              - if filter_result(attr_name)
-                = value 
+            - day = workout.created_at.day
+            - month = workout.created_at.month
+            - year = workout.created_at.year
+            = "#{month}/#{day}/#{year}"
+          - @workouts.first.attributes.each do |attr_name, value|
+            %td
+              - if value != nil
+                - if filter_result(attr_name)
+                  = value 
 
-    
+      

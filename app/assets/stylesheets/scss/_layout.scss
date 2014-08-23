@@ -4,19 +4,33 @@ input {
 
 .top_row {
   text-shadow: none;
-  background-color: lightgrey;
+  background-color: #165F80;
+  color: white;
   text-align: center
 }
 
-table {
+.table_format {
   margin: auto;
   text-align: center;
   border: 1px solid black;
   border-radius: 50px;
 }
 
-.ui-content{
-  -webkit-box-align: center;
-  -webkit-box-pack: center;
-  display: -webkit-box;
+* {
+  box-sizing: border-box;
 }
+
+
+a{
+  text-decoration: none;
+  color: white;
+  &:visited {
+    color: white
+  }
+}
+
+// .ui-content{
+//   -webkit-box-align: center;
+//   -webkit-box-pack: center;
+//   display: -webkit-box;
+// }

@@ -1,16 +1,19 @@
-#workout_index{"data-role" => "main"}
-  #menu{"data-role" => "panel"}
-    %a.ui-btn.ui-btn-inline.ui-shadow.ui-corner-all.ui-btn-a.ui-icon-plus.ui-btn-icon-notext{"data-rel" => "close", :href => new_user_workout_path}
-    - @unique_workouts = []
-    - @user.first.workouts.each do |workout|
-      - @unique_workouts << workout.name
-      - @unique_workouts.uniq!
-    - @unique_workouts.each do |workout|
-      - @workout = Workout.where('name = ?', workout).first
-      %br
-      %a.ui-btn.ui-btn-inline.ui-shadow.ui-corner-all.ui-btn-a.ui-icon-carat-r.ui-btn-icon-left{"data-rel" => "close", :href => user_workout_path(id: @workout.id)} #{workout.capitalize}
+.workout-container
+  #welcome-header
+    Welcome, #{@user.first.name.capitalize}!
+    .menu-button
+      MENU
+  .workout-list
+    = link_to "+", new_user_workout_path
+    %br
+    %br
+    %ul
+      - @unique_workouts = []
+      - @user.first.workouts.each do |workout|
+        - @unique_workouts << workout.name
+        - @unique_workouts.uniq!
+      - @unique_workouts.each do |workout|
+        - @workout = Workout.where('name = ?', workout).first
+        %li
+          = link_to workout.capitalize, user_workout_path(id: @workout.id)
 
-  %div{"data-role" => "header"}
-    %h1 
-      Welcome, #{@user.first.name.capitalize}!
-    %a.ui-btn.ui-btn-inline.ui-corner-all.ui-shadow.ui-icon-bullets.ui-btn-icon-notext{:href => "#menu"}
