@@ -1,13 +1,1 @@
-= link_to "Back", user_workouts_path
-
-= form_for @workout, :url => user_workouts_path, :html => { :method => :post } do |f| 
-
-  = f.text_field :name, placeholder: "Exercise" 
-  = f.text_field :set, placeholder: "Set" 
-  = f.text_field :reps, placeholder: "Reps"
-  = f.text_field :weight, placeholder: "Weight"
-  = f.text_field :time, placeholder: "Time"
-  = f.text_field :distance, placeholder: "Distance"
-  = f.text_field :feel, placeholder: "Feel"
-
-  = f.submit "Log"
+= render partial: "form"

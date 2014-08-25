@@ -1,11 +1,13 @@
 .workout-container
-  #welcome-header
-    #{@workouts.first.name.capitalize}
+  .header
+    .title-header
+      #{@workouts.first.name.capitalize}
     .menu-button
-      = link_to "Back", user_workouts_path
-
+      = link_to "Back", :back
 
   %br
+
+  = render partial: "form"
 
   %table{class: "table_format"}
     %tr

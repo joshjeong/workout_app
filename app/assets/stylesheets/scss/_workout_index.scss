@@ -4,15 +4,15 @@
   width: 17rem;
   height: 20rem;
   overflow: scroll;
-  #welcome-header{
-    text-align: center;
+  .header{
+    text-align: left;
     background-color: #0b3040;
     color: #FFFFFF;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 2rem 0.2rem 2rem;
+    .title-header{
+      text-align: center;
+    }
     .menu-button{
-      position: absolute;
-      text-align: left;
     }
   }
   .workout-list{
