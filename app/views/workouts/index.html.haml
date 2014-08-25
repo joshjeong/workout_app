@@ -4,7 +4,7 @@
       Welcome, #{@user.first.name.capitalize}!
     #menu-button.fa.fa-bars
   .workout-list
-    = link_to "+", new_user_workout_path
+    = link_to content_tag(:i, nil, class: "fa fa-plus"), new_user_workout_path
     %br
     %br
     %ul
