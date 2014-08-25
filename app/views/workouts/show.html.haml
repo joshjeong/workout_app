@@ -3,7 +3,7 @@
     .title-header
       #{@workouts.first.name.capitalize}
     .menu-button
-      = link_to "Back", :back
+      = link_to "Back", user_workouts_path(user_id: params[:user_id])
 
   %br
 
