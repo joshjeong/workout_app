@@ -18,7 +18,7 @@ Controller = {}
 var Controller = function(view){
   v = view
   this.bindListeners = function(){
-    $('.menu-button').on('click', this.showMenu);
+    $('#menu-button').on('click', this.showMenu);
   };
 
   this.showMenu = function(){
