@@ -25,7 +25,7 @@
             - month = workout.created_at.month
             - year = workout.created_at.year
             = "#{month}/#{day}/#{year}"
-          - @workouts.first.attributes.each do |attr_name, value|
+          - workout.attributes.each do |attr_name, value|
             %td
               - if value != nil
                 - if filter_result(attr_name)
