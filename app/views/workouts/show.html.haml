@@ -3,10 +3,8 @@
     .title-header
       #{@workouts.first.name.capitalize}
     .menu-button
-      = link_to "Back", user_workouts_path(user_id: params[:user_id])
-
+      = link_to content_tag(:i,nil, class:"fa fa-reply"), user_workouts_path(user_id: params[:user_id])
   %br
-
   = render partial: "form"
 
   %table{class: "table_format"}
