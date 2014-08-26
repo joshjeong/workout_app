@@ -1,0 +1,19 @@
+.ledger-container
+  .header
+    .title-header
+      Welcome, #{@user.first.name.capitalize}!
+    #menu-button.fa.fa-bars
+  .ledger-list
+    = link_to content_tag(:i, nil, class: "fa fa-plus"), new_user_ledger_path
+    %br
+    %br
+    %ul
+      - @unique_ledgers = []
+      - @user.first.ledgers.each do |ledger|
+        - @unique_ledgers << ledger.name
+        - @unique_ledgers.uniq!
+      - @unique_ledgers.each do |ledger|
+        - @ledger = Ledger.where('name = ?', ledger).first
+        %li
+          = link_to ledger.capitalize, user_ledger_path(id: @ledger.id)
+

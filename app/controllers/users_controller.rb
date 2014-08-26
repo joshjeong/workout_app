@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    redirect_to user_workouts_path(params[:id])
+    redirect_to user_ledgers_path(params[:id])
   end
 
 

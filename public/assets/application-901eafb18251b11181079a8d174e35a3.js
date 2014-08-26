@@ -11345,7 +11345,7 @@ View = {}
 
 var View = function(){
   this.changeMenuPosition = function(){
-    $('.workout-list').slideToggle()
+    $('.ledger-list').slideToggle()
   }
 }
 

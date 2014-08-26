@@ -7,12 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 josh = User.create(name: 'josh', email: 'j', password: 'asdf')
-w1 = josh.workouts.create(name: 'push up', reps: 15)
-w11 = josh.workouts.create(name: 'push up', reps: 16)
-w12 = josh.workouts.create(name: 'push up', reps: 19)
-w2 = josh.workouts.create(name: 'run')
-w3 = josh.workouts.create(name: 'bench', set: 1, reps: 3, weight: 150)
-w31 = josh.workouts.create(name: 'bench', set: 1, reps: 4, weight: 160)
-w32 = josh.workouts.create(name: 'bench', set: 1, reps: 5, weight: 170)
-w4 = Workout.create(name: 'yooooooo')
+l1 = josh.ledgers.create(item: "Movie", price: 10, note: "Guardians of the Angels", payment_type: "Credit")
+l2 = josh.ledgers.create(item: "Soda", price: 4, note: "Sprite", payment_type: "Debit")
+l3 = josh.ledgers.create(item: "3 Wisemen", price: 9, note: "Someone's Birthday", payment_type: "Cash")
+l4 = josh.ledgers.create(item: "Hot Dog", price: 6, note: "What's Up Dog", payment_type: "PayPal")
+l5 = josh.ledgers.create(item: "Game", price: 20, note: "Madden 2015", payment_type: "Venmo")
+l6 = josh.ledgers.create(item: "Phone", price: 300, note: "iPhone 6", payment_type: "Credit")
+l7 = josh.ledgers.create(item: "Candy", price: 1, note: "Snickers", payment_type: "Cash")
+
 

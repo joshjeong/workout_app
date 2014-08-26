@@ -1,9 +1,9 @@
-.workout-container
+.ledger-container
   .header
     .title-header
-      #{@workouts.first.name.capitalize}
+      #{@ledgers.first.name.capitalize}
     .menu-button
-      = link_to content_tag(:i,nil, class:"fa fa-reply"), user_workouts_path(user_id: params[:user_id])
+      = link_to content_tag(:i,nil, class:"fa fa-reply"), user_ledgers_path(user_id: params[:user_id])
   %br
   #container{:style => "min-width: 410px; height: 300px; margin: 0 auto"}
   = render partial: "form"
@@ -12,16 +12,16 @@
     %tr
       %td{class: "top_row"}
         Date
-      - @workouts.first.attributes.each do |attr_name, value|
+      - @ledgers.first.attributes.each do |attr_name, value|
         %td{class: "top_row"}
           - if value != nil
             - if filter_result(attr_name)
               = attr_name.capitalize
-      - @workouts.each do |workout|
+      - @ledgers.each do |ledger|
         %tr
           %td
-            = get_date(workout)
-          - workout.attributes.each do |attr_name, value|
+            = get_date(ledger)
+          - ledger.attributes.each do |attr_name, value|
             %td
               - if value != nil
                 - if filter_result(attr_name)
@@ -35,14 +35,14 @@
   var chart = $(function () {
   $('#container').highcharts({
       title: {
-          text: 'Workout Progress',
+          text: 'Ledger Progress',
           x: -20 //center
       },
       xAxis: {
 
           categories: [ 
             #{
-              @workouts.map {|workout| "#{get_date(workout)}"}.join(', ')
+              @ledgers.map {|ledger| "#{get_date(ledger)}"}.join(', ')
             }]
       },
       yAxis: {
@@ -65,10 +65,10 @@
           borderWidth: 0
       },
       series: [{
-          name: "#{@workouts.first.name}",
+          name: "#{@ledgers.first.name}",
           data: [ 
             #{
-              @workouts.map {|workout| "#{workout.reps}"}.join(', ')
+              @ledgers.map {|ledger| "#{ledger.reps}"}.join(', ')
             }]
       }]
   });

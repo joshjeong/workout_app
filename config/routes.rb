@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'users#index'
 
   resources :users do
-    resources :workouts
+    resources :ledgers
   end
   post '/verify', to: 'users#verify'
 

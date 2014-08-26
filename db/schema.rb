@@ -16,23 +16,20 @@ ActiveRecord::Schema.define(version: 20140815043533) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password"
+  create_table "ledgers", force: true do |t|
+    t.integer  "user_id"
+    t.string   "item"
+    t.float    "price"
+    t.text     "note"
+    t.string   "payment_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "workouts", force: true do |t|
-    t.integer  "user_id"
+  create_table "users", force: true do |t|
     t.string   "name"
-    t.integer  "set"
-    t.integer  "reps"
-    t.integer  "weight"
-    t.integer  "time"
-    t.integer  "distance"
-    t.integer  "feel"
+    t.string   "email"
+    t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

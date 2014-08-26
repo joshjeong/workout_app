@@ -68,7 +68,7 @@ input {
   font-family: 'Signika', sans-serif;
   font-size: 1.3rem; }
 
-.workout-list {
+.ledger-list {
   font-family: 'Signika', sans-serif;
   font-size: .8rem; }
 
@@ -102,46 +102,46 @@ a {
   background-color: #587e8c;
   color: white; }
 
-.workout-container {
+.ledger-container {
   margin: auto;
   border-collapse: collapse;
   width: 17rem;
   height: 20rem;
   overflow: scroll; }
-  .workout-container .header {
+  .ledger-container .header {
     text-align: left;
     background-color: #0b3040;
     color: #FFFFFF;
     padding: 1rem 2rem 0.2rem 2rem; }
-    .workout-container .header .title-header {
+    .ledger-container .header .title-header {
       text-align: center; }
-  .workout-container .workout-list {
+  .ledger-container .ledger-list {
     width: 5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     text-align: center;
     background-color: lightgray; }
-    .workout-container .workout-list ul {
+    .ledger-container .ledger-list ul {
       border-collapse: collapse; }
-      .workout-container .workout-list ul li {
+      .ledger-container .ledger-list ul li {
         padding-top: 0.2rem;
         padding-bottom: 0.2rem;
         border-bottom: 1px solid white; }
-        .workout-container .workout-list ul li a {
+        .ledger-container .ledger-list ul li a {
           color: #165F80; }
 
-.workout_form {
+.ledger_form {
   margin: auto;
   width: 15rem; }
-  .workout_form input {
+  .ledger_form input {
     width: 100%;
     height: 2rem; }
-    .workout_form input:focus {
+    .ledger_form input:focus {
       outline: 0; }
-  .workout_form .input-field {
+  .ledger_form .input-field {
     border: 1px solid lightgray;
     padding-left: 0.5rem; }
-  .workout_form #signup {
+  .ledger_form #signup {
     position: relative;
     top: 1rem; }
 /*

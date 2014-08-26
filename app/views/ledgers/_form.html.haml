@@ -1,7 +1,7 @@
-.workout_form
-  = link_to "Back", user_workouts_path
+.ledger_form
+  = link_to "Back", user_ledgers_path
 
-  = form_for @workout, :url => user_workouts_path, :html => { :method => :post } do |f| 
+  = form_for @ledger, :url => user_ledgers_path, :html => { :method => :post } do |f| 
 
     = f.text_field :name, placeholder: "Exercise", class: "input-field"
     = f.text_field :set, placeholder: "Set", class: "input-field"
