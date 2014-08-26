@@ -48,7 +48,6 @@ table {
 .container {
   max-width: 568px;
   text-align: center;
-  margin-top: 3rem;
   border-collapse: true; }
   .container input {
     border: 1px solid lightgray;
@@ -56,6 +55,8 @@ table {
     height: 2rem;
     margin: auto;
     display: block; }
+  .container .new_user {
+    margin-top: 3rem; }
   .container .input-field {
     padding-left: 1rem; }
   .container .btn {
@@ -68,3 +69,22 @@ table {
 
 * {
   box-sizing: border-box; }
+
+.container .header {
+  background-color: #4099FF;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  .container .header .title-header {
+    color: white; }
+  .container .header #menu-button {
+    position: absolute;
+    padding-left: 2rem;
+    left: 0; }
+.container .ledger-list {
+  background-color: blue;
+  width: 5rem; }
+.container .ledger-table .table-content {
+  text-align: left; }
+  .container .ledger-table .table-content td {
+    max-width: 5rem; }

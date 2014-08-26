@@ -1,6 +1,7 @@
 class LedgersController < ApplicationController
   def index
-    @user = User.where('id = ?', params[:user_id])
+    @user = User.find(params[:user_id])
+    @ledgers = @user.ledgers
   end
 
   def new

@@ -1,0 +1,28 @@
+.container{
+  .header{
+    background-color: #4099FF;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    .title-header{
+      color: white;
+    }
+    #menu-button{
+      position:absolute;
+      padding-left: 2rem;
+      left: 0
+    }
+  }
+  .ledger-list{
+    background-color: blue;
+    width: 5rem;
+  }
+  .ledger-table{
+    .table-content{
+      text-align: left;
+      td{
+        max-width: 5rem;
+      }
+    }
+  }
+}
