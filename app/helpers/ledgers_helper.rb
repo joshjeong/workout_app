@@ -9,4 +9,11 @@ module LedgersHelper
     year = ledger.created_at.year
     "#{month}/#{day}/#{year}"
   end
+
+  def time_ago(created_at)
+    sec = Time.now - created_at
+    from_time = Time.now - sec
+    return time_ago_in_words(from_time)
+  end
+
 end
