@@ -45,8 +45,27 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.workout_form {
+  margin: auto;
+  width: 15rem; }
+  .workout_form input {
+    width: 100%;
+    height: 2rem; }
+    .workout_form input:focus {
+      outline: 0; }
+  .workout_form .input-field {
+    border: 1px solid lightgray;
+    padding-left: 0.5rem; }
+  .workout_form #signup {
+    position: relative;
+    top: 1rem; }
+
 input {
   display: block; }
+
+html {
+  overflow-x: hidden;
+  overflow-y: hidden; }
 
 .top_row {
   text-shadow: none;
@@ -102,7 +121,6 @@ a {
   color: white; }
 
 .workout-container {
-  margin: auto;
   border-collapse: collapse;
   width: 17rem;
   height: 20rem;
@@ -128,18 +146,3 @@ a {
         border-bottom: 1px solid white; }
         .workout-container .workout-list ul li a {
           color: #165F80; }
-
-.workout_form {
-  margin: auto;
-  width: 15rem; }
-  .workout_form input {
-    width: 100%;
-    height: 2rem; }
-    .workout_form input:focus {
-      outline: 0; }
-  .workout_form .input-field {
-    border: 1px solid lightgray;
-    padding-left: 0.5rem; }
-  .workout_form #signup {
-    position: relative;
-    top: 1rem; }
