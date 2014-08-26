@@ -1,7 +1,7 @@
 .container
   = form_for @user, url: {action: "verify"} do |f| 
-    = f.text_field :email, placeholder: 'Email', class: "input-field"
-    = f.password_field :password, placeholder: 'Password', class: "input-field"
+    = f.text_field :email, placeholder: 'Email', class: "input-field", required: true
+    = f.password_field :password, placeholder: 'Password', class: "input-field", required: true
     = f.submit "Login", class: "btn"
 
     = link_to "Sign Up", new_user_path, id: "signup"
