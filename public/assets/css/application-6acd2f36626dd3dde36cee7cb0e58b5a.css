@@ -2,6 +2,7 @@
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
  */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,27 +46,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.workout_form {
-  margin: auto;
-  width: 15rem; }
-  .workout_form input {
-    width: 100%;
-    height: 2rem; }
-    .workout_form input:focus {
-      outline: 0; }
-  .workout_form .input-field {
-    border: 1px solid lightgray;
-    padding-left: 0.5rem; }
-  .workout_form #signup {
-    position: relative;
-    top: 1rem; }
-
 input {
   display: block; }
-
-html {
-  overflow-x: hidden;
-  overflow-y: hidden; }
 
 .top_row {
   text-shadow: none;
@@ -121,6 +103,7 @@ a {
   color: white; }
 
 .workout-container {
+  margin: auto;
   border-collapse: collapse;
   width: 17rem;
   height: 20rem;
@@ -146,3 +129,34 @@ a {
         border-bottom: 1px solid white; }
         .workout-container .workout-list ul li a {
           color: #165F80; }
+
+.workout_form {
+  margin: auto;
+  width: 15rem; }
+  .workout_form input {
+    width: 100%;
+    height: 2rem; }
+    .workout_form input:focus {
+      outline: 0; }
+  .workout_form .input-field {
+    border: 1px solid lightgray;
+    padding-left: 0.5rem; }
+  .workout_form #signup {
+    position: relative;
+    top: 1rem; }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

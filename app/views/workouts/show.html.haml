@@ -5,6 +5,7 @@
     .menu-button
       = link_to content_tag(:i,nil, class:"fa fa-reply"), user_workouts_path(user_id: params[:user_id])
   %br
+  #container{:style => "min-width: 410px; height: 300px; margin: 0 auto"}
   = render partial: "form"
 
   %table{class: "table_format"}
@@ -19,14 +20,57 @@
       - @workouts.each do |workout|
         %tr
           %td
-            - day = workout.created_at.day
-            - month = workout.created_at.month
-            - year = workout.created_at.year
-            = "#{month}/#{day}/#{year}"
+            = get_date(workout)
           - workout.attributes.each do |attr_name, value|
             %td
               - if value != nil
                 - if filter_result(attr_name)
                   = value 
 
-      
+
+:javascript
+  $(document).ready(function() {
+  chart;
+  
+  var chart = $(function () {
+  $('#container').highcharts({
+      title: {
+          text: 'Workout Progress',
+          x: -20 //center
+      },
+      xAxis: {
+
+          categories: [ 
+            #{
+              @workouts.map {|workout| "#{get_date(workout)}"}.join(', ')
+            }]
+      },
+      yAxis: {
+          title: {
+              text: 'Average reps'
+          },
+          plotLines: [{
+              value: 0,
+              width: 1,
+              color: '#808080'
+          }]
+      },
+      tooltip: {
+          valueSuffix: ' reps'
+      },
+      legend: {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'middle',
+          borderWidth: 0
+      },
+      series: [{
+          name: "#{@workouts.first.name}",
+          data: [ 
+            #{
+              @workouts.map {|workout| "#{workout.reps}"}.join(', ')
+            }]
+      }]
+  });
+  });
+  });
